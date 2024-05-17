@@ -7,3 +7,6 @@ the initial version of the following files and directories are directly provided
 - orig_README.md
 - doc_en/
 - sample/
+
+the following directories contain a mix of original and custom code, with appropriate annotations:
+- install_sdk
