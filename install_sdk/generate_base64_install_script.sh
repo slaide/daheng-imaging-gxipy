@@ -14,7 +14,7 @@ head -n $(($BINARY_ARCHIVE_FIRST_LINE - 1)) "$TARGET_FILE" | tee "$SAFE_OUTPUT_F
 tail -n +$BINARY_ARCHIVE_FIRST_LINE "$TARGET_FILE" | base64 >> "$SAFE_OUTPUT_FILE"
 
 # modify data extraction command
-sed -i '' 's#tail -n +$ARCHIVE $0 > Galaxy_camera.tar.gz#tail -n +$ARCHIVE $0 | base64 --decode -o Galaxy_camera.tar.gz#' "$SAFE_OUTPUT_FILE"
+sed -i 's#tail -n +$ARCHIVE $0 > Galaxy_camera.tar.gz#tail -n +$ARCHIVE $0 | base64 --decode > Galaxy_camera.tar.gz#' "$SAFE_OUTPUT_FILE"
 # if you run this command on macos, use $ sed -i '' 's#tail ....' # instead
 
 echo "done"
