@@ -10,4 +10,7 @@ setup(
     description='',
     license='MIT',
     packages=['gxipy'],
+    install_requires=[
+        'numpy',
+    ]
 )
